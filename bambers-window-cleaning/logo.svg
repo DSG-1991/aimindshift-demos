@@ -1,0 +1,29 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="#4A90E2" opacity="0.1"/>
+  
+  <!-- Window Frame -->
+  <rect x="50" y="40" width="100" height="100" rx="10" fill="#4A90E2" stroke="#7FBA00" stroke-width="4"/>
+  
+  <!-- Window Panes (Cross) -->
+  <line x1="100" y1="40" x2="100" y2="140" stroke="#7FBA00" stroke-width="4"/>
+  <line x1="50" y1="90" x2="150" y2="90" stroke="#7FBA00" stroke-width="4"/>
+  
+  <!-- Sparkle/Shine Effect (Top Left) -->
+  <circle cx="75" cy="65" r="8" fill="#FDB714" opacity="0.9"/>
+  <path d="M 75 55 L 77 63 L 85 65 L 77 67 L 75 75 L 73 67 L 65 65 L 73 63 Z" fill="#FDB714"/>
+  
+  <!-- Sparkle/Shine Effect (Bottom Right) -->
+  <circle cx="125" cy="115" r="6" fill="#FDB714" opacity="0.8"/>
+  <path d="M 125 109 L 126.5 114 L 131 115 L 126.5 116 L 125 121 L 123.5 116 L 119 115 L 123.5 114 Z" fill="#FDB714"/>
+  
+  <!-- Squeegee Tool -->
+  <rect x="140" y="120" width="8" height="60" rx="4" fill="#7FBA00"/>
+  <rect x="135" y="120" width="18" height="12" rx="2" fill="#4A90E2"/>
+  
+  <!-- Water Droplet -->
+  <path d="M 60 155 Q 60 145 65 145 Q 70 145 70 155 Q 70 162 65 165 Q 60 162 60 155 Z" fill="#4A90E2" opacity="0.6"/>
+  
+  <!-- Text -->
+  <text x="100" y="190" font-family="Nunito, Arial, sans-serif" font-size="16" font-weight="bold" fill="#4A90E2" text-anchor="middle">BAMBERS</text>
+</svg>

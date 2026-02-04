@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJC Electrical Services - Professional Electricians in Blackpool</title>
+    <meta name="description" content="Expert electrical services in Blackpool. From installations to repairs - certified, reliable, professional. Get your free quote today.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1A1A1A;
+            --secondary: #0EA5E9;
+            --accent: #F59E0B;
+            --text: #1F2937;
+            --text-light: #6B7280;
+            --bg: #FFFFFF;
+            --bg-dark: #0F172A;
+            --bg-light: #F8FAFC;
+            --border: #E5E7EB;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        /* Emergency Banner - WOW Feature #1 */
+        .emergency-banner {
+            background: linear-gradient(90deg, var(--secondary) 0%, #0284C7 100%);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .emergency-banner a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+            padding: 6px 16px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 0;
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .emergency-banner a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Header */
+        header {
+            background: var(--bg);
+            padding: 20px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 56px;
+            z-index: 999;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: var(--secondary);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            border: 2px solid var(--secondary);
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-call {
+            background: var(--secondary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 0;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-call:hover {
+            background: #0284C7;
+            border-color: #0284C7;
+            transform: translateX(2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--bg-dark);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(45deg, var(--secondary) 0%, transparent 70%),
+                linear-gradient(-45deg, var(--accent) 0%, transparent 70%);
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .hero-highlight {
+            color: var(--secondary);
+            display: block;
+            margin-top: 10px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+
+        .certification-strip {
+            display: inline-flex;
+            gap: 30px;
+            margin-top: 40px;
+            padding: 20px 40px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .cert-item {
+            text-align: center;
+        }
+
+        .cert-item strong {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary);
+            font-weight: 900;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px;
+            border-radius: 0;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--secondary);
+            transition: height 0.2s;
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateX(5px);
+            border-color: var(--secondary);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+        }
+
+        /* Quick Quote Form - WOW Feature #3 */
+        .quick-quote {
+            background: var(--bg-dark);
+            padding: 80px 20px;
+            color: white;
+        }
+
+        .quick-quote .section-title {
+            color: white;
+        }
+
+        .quote-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 0;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 0;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.05);
+            color: white;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--secondary);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-submit:hover {
+            background: #0284C7;
+            transform: translateY(-2px);
+        }
+
+        /* Service Area Map - WOW Feature #4 */
+        .service-area {
+            padding: 80px 20px;
+            background: var(--bg);
+        }
+
+        .map-container {
+            max-width: 900px;
+            margin: 30px auto 0;
+            border-radius: 0;
+            overflow: hidden;
+            height: 450px;
+            border: 3px solid var(--primary);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            padding: 80px 20px;
+            background: var(--bg-light);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 0;
+        }
+
+        .why-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            color: var(--secondary);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 20px;
+            border: 2px solid var(--secondary);
+        }
+
+        .why-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        /* Sticky Mobile Contact - WOW Feature #2 */
+        .mobile-contact-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 15px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            gap: 10px;
+            border-top: 3px solid var(--secondary);
+        }
+
+        .mobile-contact-bar a {
+            flex: 1;
+            padding: 15px;
+            border-radius: 0;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            border: 2px solid;
+        }
+
+        .mobile-call {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .mobile-whatsapp {
+            background: #25D366;
+            color: white;
+            border-color: #25D366;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-contact-bar {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .header-cta {
+                display: none;
+            }
+
+            body {
+                padding-bottom: 80px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-dark);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        ⚡ 24/7 Emergency Electrical Services - Certified & Insured
+        <a href="tel:+447947952296">Call: 07947 952296</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <span>AJC Electrical</span>
+            </div>
+            <div class="header-cta">
+                <a href="tel:+447947952296" class="btn-call">📞 Call 07947 952296</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                Professional Electrical Services
+                <span class="hero-highlight">Blackpool's Trusted Electricians</span>
+            </h1>
+            <p>From installations to repairs - certified, reliable, and professional electrical work you can trust.</p>
+            <a href="#quote" class="btn-call" style="display: inline-block;">Get Your Free Quote</a>
+            
+            <div class="certification-strip">
+                <div class="cert-item">
+                    <strong>NICEIC</strong>
+                    <span>Certified</span>
+                </div>
+                <div class="cert-item">
+                    <strong>Part P</strong>
+                    <span>Registered</span>
+                </div>
+                <div class="cert-item">
+                    <strong>5★</strong>
+                    <span>Rated</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Electrical Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Electrical Installations</h3>
+                    <p>Complete electrical installations for new builds, extensions, and renovations. From wiring to lighting - done right.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔌</div>
+                    <h3>Repairs & Maintenance</h3>
+                    <p>Fast, reliable repairs for all electrical issues. Regular maintenance to keep your electrical systems safe and compliant.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <h3>Lighting Design</h3>
+                    <p>Modern LED lighting installations, outdoor lighting, and complete lighting system design for your property.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Rewiring Services</h3>
+                    <p>Full or partial property rewiring. Bringing older properties up to current safety standards with minimal disruption.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔒</div>
+                    <h3>Electrical Testing</h3>
+                    <p>PAT testing, EICR certificates, and periodic electrical inspections. Ensuring your property is safe and compliant.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚠️</div>
+                    <h3>24/7 Emergency</h3>
+                    <p>Emergency electrical services available 24/7. When you need an electrician fast, we're here to help.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Quote Form -->
+    <section class="quick-quote" id="quote">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Quote in 30 Seconds</h2>
+            <form class="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" required placeholder="John Smith">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" required placeholder="07xxx xxx xxx">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Service Required</label>
+                    <select name="service" required>
+                        <option value="">Select a service...</option>
+                        <option value="installation">Electrical Installation</option>
+                        <option value="repair">Repair & Maintenance</option>
+                        <option value="lighting">Lighting Design</option>
+                        <option value="rewiring">Rewiring</option>
+                        <option value="testing">Electrical Testing</option>
+                        <option value="emergency">Emergency Callout</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Project Details</label>
+                    <textarea name="details" rows="4" placeholder="Tell us about your electrical needs..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Get My Free Quote</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Service Area Map -->
+    <section class="service-area">
+        <div class="container">
+            <h2 class="section-title">Areas We Cover</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; color: var(--text-light);">
+                Proudly serving Blackpool and surrounding areas including Fleetwood, Cleveleys, Thornton, Poulton-le-Fylde, and the entire Fylde Coast.
+            </p>
+            <div class="map-container">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-3.0879%2C53.7858%2C-2.9879%2C53.8558&layer=mapnik&marker=53.8175%2C-3.0379"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose AJC Electrical?</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">✓</div>
+                    <h3>Fully Certified</h3>
+                    <p>NICEIC approved contractor with all necessary qualifications and insurance.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">⚡</div>
+                    <h3>Fast Response</h3>
+                    <p>Same-day service available. We're here when you need us, including emergencies.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">💰</div>
+                    <h3>Fair Pricing</h3>
+                    <p>Transparent quotes with no hidden costs. Quality work at competitive rates.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">⭐</div>
+                    <h3>5-Star Rated</h3>
+                    <p>Perfect 5.0 rating from satisfied customers across Blackpool.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="portfolio" style="padding: 80px 20px; background: var(--bg);">
+        <div class="container">
+            <h2 class="section-title">Our Recent Work</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px; color: var(--text-light);">
+                Professional electrical installations and repairs across Blackpool and the Fylde Coast.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                <div style="border: 1px solid var(--border); overflow: hidden; background: white;">
+                    <img src="portfolio/work-1.png" alt="Electrical installation project" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 20px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--primary);">Consumer Unit Installation</h3>
+                        <p style="color: var(--text-light); font-size: 0.95rem;">Modern consumer unit upgrade for domestic property</p>
+                    </div>
+                </div>
+                <div style="border: 1px solid var(--border); overflow: hidden; background: white;">
+                    <img src="portfolio/work-2.png" alt="LED lighting installation" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 20px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--primary);">LED Lighting Design</h3>
+                        <p style="color: var(--text-light); font-size: 0.95rem;">Contemporary LED downlights in modern kitchen</p>
+                    </div>
+                </div>
+                <div style="border: 1px solid var(--border); overflow: hidden; background: white;">
+                    <img src="portfolio/work-3.png" alt="Socket installation" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 20px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--primary);">Socket & Switch Installation</h3>
+                        <p style="color: var(--text-light); font-size: 0.95rem;">Professional electrical fitting installation</p>
+                    </div>
+                </div>
+                <div style="border: 1px solid var(--border); overflow: hidden; background: white;">
+                    <img src="portfolio/work-4.png" alt="Outdoor lighting" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 20px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--primary);">Outdoor Security Lighting</h3>
+                        <p style="color: var(--text-light); font-size: 0.95rem;">External lighting installation for home security</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews" style="padding: 80px 20px; background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div style="background: white; padding: 30px; border: 1px solid var(--border); position: relative;">
+                    <div style="display: flex; gap: 5px; margin-bottom: 15px;">
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                    </div>
+                    <p style="color: var(--text); margin-bottom: 20px; line-height: 1.6;">
+                        "Andrew was brilliant - arrived exactly when promised and fixed our faulty fuse box quickly and professionally. Explained everything clearly and left the work area spotless. Very fair pricing too. Would definitely recommend."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-top: auto;">
+                        <div style="width: 40px; height: 40px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">SP</div>
+                        <div>
+                            <strong style="color: var(--primary);">Sarah P.</strong>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin: 0;">Fuse box replacement</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 30px; border: 1px solid var(--border); position: relative;">
+                    <div style="display: flex; gap: 5px; margin-bottom: 15px;">
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                    </div>
+                    <p style="color: var(--text); margin-bottom: 20px; line-height: 1.6;">
+                        "Called AJC for an emergency when our power went out at 9pm. Andrew came out within the hour and sorted the issue. Very reliable and professional service, reasonable emergency call-out rate."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-top: auto;">
+                        <div style="width: 40px; height: 40px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">MT</div>
+                        <div>
+                            <strong style="color: var(--primary);">Mark T.</strong>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin: 0;">Emergency electrical repair</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 30px; border: 1px solid var(--border); position: relative;">
+                    <div style="display: flex; gap: 5px; margin-bottom: 15px;">
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                        <span style="color: var(--accent); font-size: 1.5rem;">⭐</span>
+                        <span style="color: var(--text-light); font-size: 1.5rem;">⭐</span>
+                    </div>
+                    <p style="color: var(--text); margin-bottom: 20px; line-height: 1.6;">
+                        "Had full house rewiring done. Andrew and his team were thorough and tidy. Job took a bit longer than initially quoted but workmanship was excellent. Would use again."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-top: auto;">
+                        <div style="width: 40px; height: 40px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">CB</div>
+                        <div>
+                            <strong style="color: var(--primary);">Claire B.</strong>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin: 0;">Full house rewiring</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AJC Electrical Services</h3>
+                <p>Professional electrical services in Blackpool. Certified, reliable, and trusted by homeowners and businesses across the Fylde Coast.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📞 07947 952296</p>
+                <p>✉️ info@ajcelectricalservices.co.uk</p>
+                <p>📍 11 Aylesbury Avenue, Blackpool, FY4 5BX</p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <a href="#services">Electrical Installations</a>
+                <a href="#services">Repairs & Maintenance</a>
+                <a href="#services">Lighting Design</a>
+                <a href="#services">Rewiring Services</a>
+                <a href="#services">Electrical Testing</a>
+            </div>
+            <div class="footer-section">
+                <h3>Areas Covered</h3>
+                <p>Blackpool</p>
+                <p>Fleetwood</p>
+                <p>Cleveleys</p>
+                <p>Thornton</p>
+                <p>Poulton-le-Fylde</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Professional website by <a href="https://aimindshift.consulting" target="_blank">AiMindShift</a> - Helping local businesses get found online</p>
+            <p>&copy; 2026 AJC Electrical Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Contact Bar -->
+    <div class="mobile-contact-bar">
+        <a href="tel:+447947952296" class="mobile-call">📞 Call Now</a>
+        <a href="https://wa.me/447947952296" class="mobile-whatsapp">💬 WhatsApp</a>
+    </div>
+
+    <!-- Live Chat Widget - WOW Feature #5 (Tawk.to - Ready to activate) -->
+    <!-- 
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/YOUR_WIDGET_ID';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    -->
+</body>
+</html>

@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bambers Window Cleaning | Blackpool's #1 Window Cleaners</title>
+    <meta name="description" content="Professional window cleaning in Blackpool. Residential & commercial. Free quotes. Fully insured. 10+ years experience.">
+    <meta name="keywords" content="window cleaning Blackpool, window cleaners Blackpool, residential window cleaning, commercial window cleaning">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #4A90E2;
+            --secondary: #7FBA00;
+            --accent: #FDB714;
+            --background: #F9F9F9;
+            --white: #ffffff;
+            --text-dark: #333;
+            --text-light: #666;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+            --shadow-hover: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--background);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo i {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+        
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 1.8rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-phone:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.85), rgba(127, 186, 0, 0.75));
+            z-index: 1;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(253, 183, 20, 0.2), transparent);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--accent);
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(253, 183, 20, 0.4);
+            animation: fadeInUp 1.2s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(253, 183, 20, 0.5);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+        }
+        
+        /* Pain Points */
+        .pain-points {
+            background: white;
+        }
+        
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .pain-card {
+            background: var(--background);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        
+        .pain-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .pain-card i {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .pain-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .pain-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        /* Services */
+        .services {
+            background: linear-gradient(135deg, var(--background), #e8f4f8);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            border: 3px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .service-card i {
+            font-size: 3.5rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+        
+        .price-hint {
+            background: var(--accent);
+            color: var(--text-dark);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        /* Portfolio Gallery */
+        .portfolio {
+            background: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 2rem 1.5rem 1rem;
+            font-weight: 600;
+        }
+        
+        /* Before/After Slider */
+        .before-after-section {
+            background: var(--background);
+            padding: 4rem 2rem;
+        }
+        
+        .slider-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .slider-wrapper {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+        
+        .slider-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .slider-image.before {
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+        }
+        
+        .slider-divider {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+            cursor: ew-resize;
+            z-index: 10;
+        }
+        
+        .slider-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            cursor: ew-resize;
+        }
+        
+        .slider-labels {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            pointer-events: none;
+            z-index: 5;
+        }
+        
+        .slider-label {
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .testimonials .section-title,
+        .testimonials .section-subtitle {
+            color: white;
+        }
+        
+        .testimonial-carousel {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .testimonial-card {
+            min-width: 100%;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .stars {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonial-location {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dot.active {
+            background: var(--accent);
+            transform: scale(1.3);
+        }
+        
+        /* Quote Calculator */
+        .quote-calculator {
+            background: white;
+        }
+        
+        .calculator-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--background);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .price-estimate {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .price-estimate h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+        
+        /* Service Area Map */
+        .service-area {
+            background: var(--background);
+        }
+        
+        .map-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .map-marker {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: var(--primary);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translate(-50%, -50%); }
+            50% { transform: translate(-50%, -60%); }
+        }
+        
+        .postcode-checker {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .postcode-input {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 1rem auto 0;
+            flex-wrap: wrap;
+        }
+        
+        .postcode-input input {
+            min-width: 200px;
+        }
+        
+        .check-button {
+            white-space: nowrap;
+        }
+        
+        .postcode-input input {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+        
+        .check-button {
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .check-button:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        /* About Section */
+        .about {
+            background: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        .trust-badges {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .badge {
+            background: var(--background);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .badge i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 0.8rem;
+        }
+        
+        .badge-text {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 999;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+        }
+        
+        /* Contact Form */
+        .contact {
+            background: linear-gradient(135deg, var(--background), #e8f4f8);
+        }
+        
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-form h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+        
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .contact-item i {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+        
+        .contact-item-text h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .contact-item-text p {
+            color: var(--text-light);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .footer-text {
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            opacity: 0.6;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .about-content,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-badges {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .postcode-input {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .postcode-input input,
+            .check-button {
+                width: 100%;
+            }
+            
+            .slider-wrapper {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.svg" alt="Bambers Window Cleaning Logo" style="height: 40px; margin-right: 0.5rem;">
+                <span>Bambers Window Cleaning</span>
+            </div>
+            <a href="tel:07706918434" class="header-phone">
+                <i class="fas fa-phone-alt phone-icon"></i>
+                07706 918434
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Crystal Clear Windows, Every Time</h1>
+            <p>Say goodbye to streaky windows and unreliable cleaners. We're Blackpool's most trusted window cleaning service - professional, punctual, and affordable!</p>
+            <a href="#contact" class="cta-button">Get Your Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="pain-points">
+        <div class="container">
+            <h2 class="section-title">We Understand Your Frustrations</h2>
+            <p class="section-subtitle">Let us take the hassle out of window cleaning</p>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <i class="fas fa-eye-slash"></i>
+                    <h3>Streaky Windows</h3>
+                    <p>Tired of windows that look worse after cleaning? Our professional techniques guarantee a streak-free shine every time.</p>
+                </div>
+                <div class="pain-card">
+                    <i class="fas fa-user-clock"></i>
+                    <h3>Unreliable Service</h3>
+                    <p>We turn up when we say we will. No more waiting around for cleaners who don't show. Guaranteed punctuality.</p>
+                </div>
+                <div class="pain-card">
+                    <i class="fas fa-pound-sign"></i>
+                    <h3>Hidden Costs</h3>
+                    <p>Clear, upfront pricing with no surprises. What we quote is what you pay - simple and transparent.</p>
+                </div>
+                <div class="pain-card">
+                    <i class="fas fa-triangle-exclamation"></i>
+                    <h3>Safety Concerns</h3>
+                    <p>Hard-to-reach windows? We're fully insured and equipped with professional tools to safely clean any window.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Professional window cleaning solutions for every need</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Residential Cleaning</h3>
+                    <p>Keep your home sparkling with regular or one-off window cleaning. Inside and out, we handle it all.</p>
+                    <span class="price-hint">From £25</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Commercial Cleaning</h3>
+                    <p>Shops, offices, and business premises. Professional appearance for professional businesses.</p>
+                    <span class="price-hint">Custom Quote</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-sun"></i>
+                    <h3>Conservatory Cleaning</h3>
+                    <p>Roof and glass cleaning to restore your conservatory's brilliance. Enjoy natural light again!</p>
+                    <span class="price-hint">From £40</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cloud-rain"></i>
+                    <h3>Gutter Cleaning</h3>
+                    <p>Prevent water damage with our thorough gutter cleaning service. Keep rainwater flowing freely.</p>
+                    <span class="price-hint">From £35</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <p class="section-subtitle">See the difference professional cleaning makes</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Modern house with clean windows">
+                    <div class="gallery-caption">3-story home in Blackpool - Spotless results</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600" alt="Commercial building windows">
+                    <div class="gallery-caption">Commercial office building - Professional finish</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Conservatory cleaning">
+                    <div class="gallery-caption">Conservatory restoration - Crystal clear</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600" alt="Bay windows">
+                    <div class="gallery-caption">Traditional bay windows - Immaculate shine</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="High-reach cleaning">
+                    <div class="gallery-caption">High-reach work - Safely done</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600" alt="Happy homeowner">
+                    <div class="gallery-caption">Another happy customer in FY3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Slider -->
+    <div class="before-after-section">
+        <div class="container">
+            <h2 class="section-title">See The Transformation</h2>
+            <p class="section-subtitle">Drag the slider to compare before and after</p>
+            <div class="slider-container">
+                <div class="slider-wrapper" id="sliderWrapper">
+                    <img src="https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?w=800" alt="After cleaning" class="slider-image after">
+                    <img src="https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?w=800&sat=-100&brightness=80" alt="Before cleaning" class="slider-image before" id="beforeImage">
+                    <div class="slider-labels">
+                        <span class="slider-label">Before</span>
+                        <span class="slider-label">After</span>
+                    </div>
+                    <div class="slider-divider" id="sliderDivider">
+                        <div class="slider-handle">
+                            <i class="fas fa-arrows-left-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Join hundreds of happy customers across Blackpool</p>
+            <div class="testimonial-carousel">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Absolutely brilliant service! My windows have never looked this good. They're always on time and the prices are very fair. Highly recommend!"</p>
+                        <div class="testimonial-author">Margaret Thompson</div>
+                        <div class="testimonial-location">Residential Customer • Blackpool FY3</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"We use Bambers for our shop front and they're fantastic. Professional, reliable, and our windows stay clean for weeks. Great value for money!"</p>
+                        <div class="testimonial-author">David Harrison</div>
+                        <div class="testimonial-location">Commercial Customer • Blackpool Town Centre</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Finally found a window cleaner I can trust! They did an amazing job on my conservatory. It's like having a new room. Very professional team."</p>
+                        <div class="testimonial-author">Sarah Mitchell</div>
+                        <div class="testimonial-location">Conservatory Cleaning • Bispham</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Excellent service from start to finish. Quick quote, turned up exactly when they said, and did a thorough job. My windows are spotless!"</p>
+                        <div class="testimonial-author">John Roberts</div>
+                        <div class="testimonial-location">Residential Customer • Cleveleys</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Been using Bambers for over 2 years now. Never missed a visit, always polite and professional. Best window cleaner in Blackpool, hands down!"</p>
+                        <div class="testimonial-author">Linda Preston</div>
+                        <div class="testimonial-location">Regular Customer • Poulton-le-Fylde</div>
+                    </div>
+                </div>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Calculator -->
+    <section class="quote-calculator">
+        <div class="container">
+            <h2 class="section-title">Instant Quote Calculator</h2>
+            <p class="section-subtitle">Get an estimate in seconds</p>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="numWindows">Number of Windows</label>
+                    <input type="number" id="numWindows" min="1" value="10" oninput="calculateQuote()">
+                </div>
+                <div class="form-group">
+                    <label for="propertyType">Property Type</label>
+                    <select id="propertyType" onchange="calculateQuote()">
+                        <option value="flat">Flat/Apartment</option>
+                        <option value="house" selected>House</option>
+                        <option value="large">Large House</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="frequency">Cleaning Frequency</label>
+                    <select id="frequency" onchange="calculateQuote()">
+                        <option value="once">One-off Clean</option>
+                        <option value="monthly" selected>Monthly</option>
+                        <option value="fortnightly">Fortnightly</option>
+                        <option value="weekly">Weekly</option>
+                    </select>
+                </div>
+                <div class="price-estimate">
+                    <h3>Estimated Price</h3>
+                    <div class="price-amount" id="priceDisplay">£35</div>
+                    <p style="margin-top: 1rem; opacity: 0.9;">This is an estimate. Get in touch for an exact quote!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Map -->
+    <section class="service-area">
+        <div class="container">
+            <h2 class="section-title">Areas We Cover</h2>
+            <p class="section-subtitle">Proudly serving Blackpool and surrounding areas</p>
+            <div class="map-container">
+                <iframe 
+                    width="100%" 
+                    height="400" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-3.0800%2C53.7800%2C-2.9200%2C53.8600&amp;layer=mapnik&amp;marker=53.8175%2C-3.0536"
+                    style="border-radius: 15px;">
+                </iframe>
+                <div class="postcode-checker">
+                    <h3 style="margin-bottom: 1rem;">Check if we cover your area</h3>
+                    <div class="postcode-input">
+                        <input type="text" placeholder="Enter your postcode (e.g., FY3 9AW)" id="postcodeInput">
+                        <button class="check-button" onclick="checkPostcode()">Check Coverage</button>
+                    </div>
+                    <p id="coverageResult" style="margin-top: 1rem; font-weight: 600;"></p>
+                </div>
+                <div style="margin-top: 2rem; text-align: center; color: var(--text-light);">
+                    <p><strong>We cover:</strong> Blackpool • Cleveleys • Thornton • Poulton-le-Fylde • Bispham • Layton • Marton • and surrounding areas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left;">Why Choose Bambers?</h2>
+                    <p>We're a local, family-run window cleaning business based right here in Blackpool. With over 10 years of experience, we've built our reputation on reliability, quality, and genuine care for our customers.</p>
+                    <p>We use eco-friendly cleaning products that are safe for your family, pets, and the environment. Our team is fully insured and professionally trained to handle any window cleaning challenge.</p>
+                    <p>When you choose Bambers, you're choosing a service that treats your home or business with the same care we'd give our own. We're not just window cleaners - we're your neighbors, committed to making Blackpool shine!</p>
+                    <div class="trust-badges">
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="badge-text">Fully Insured</div>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-award"></i>
+                            <div class="badge-text">10+ Years Experience</div>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-star"></i>
+                            <div class="badge-text">5-Star Rated</div>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-leaf"></i>
+                            <div class="badge-text">Eco-Friendly</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600" alt="Professional window cleaning">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Quote</h2>
+            <p class="section-subtitle">We'll get back to you within 24 hours</p>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>Send Us A Message</h3>
+                    <form>
+                        <input type="text" placeholder="Your Name *" required>
+                        <input type="email" placeholder="Your Email *" required>
+                        <input type="tel" placeholder="Your Phone Number *" required>
+                        <input type="text" placeholder="Your Address (for accurate quote)">
+                        <select required>
+                            <option value="">Select Service Type *</option>
+                            <option value="residential">Residential Window Cleaning</option>
+                            <option value="commercial">Commercial Window Cleaning</option>
+                            <option value="conservatory">Conservatory Cleaning</option>
+                            <option value="gutter">Gutter Cleaning</option>
+                            <option value="multiple">Multiple Services</option>
+                        </select>
+                        <textarea placeholder="Additional details (number of windows, property size, etc.)"></textarea>
+                        <button type="submit" class="submit-button">Get Free Quote</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="contact-item-text">
+                            <h4>Call Us</h4>
+                            <p>07706 918434</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-item-text">
+                            <h4>Email Us</h4>
+                            <p>bamberswindowcleaning@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-item-text">
+                            <h4>Visit Us</h4>
+                            <p>35 Forest Gate<br>Blackpool FY3 9AW</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-item-text">
+                            <h4>Working Hours</h4>
+                            <p>Monday - Saturday: 8am - 6pm<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/447706918434?text=Hi!%20I'd%20like%20a%20quote%20for%20window%20cleaning%20please." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Bambers Window Cleaning</div>
+            <p class="footer-text">Blackpool's trusted window cleaning service since 2014</p>
+            <div class="social-links">
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bambers Window Cleaning. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Before/After Slider
+        const sliderWrapper = document.getElementById('sliderWrapper');
+        const beforeImage = document.getElementById('beforeImage');
+        const sliderDivider = document.getElementById('sliderDivider');
+        let isDragging = false;
+
+        function updateSlider(clientX) {
+            const rect = sliderWrapper.getBoundingClientRect();
+            const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+            const percentage = (x / rect.width) * 100;
+            
+            beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+            sliderDivider.style.left = `${percentage}%`;
+        }
+
+        sliderWrapper.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            updateSlider(e.clientX);
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                updateSlider(e.clientX);
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        sliderWrapper.addEventListener('touchstart', (e) => {
+            updateSlider(e.touches[0].clientX);
+        });
+
+        sliderWrapper.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+            updateSlider(e.touches[0].clientX);
+        });
+
+        // Testimonial Carousel
+        const track = document.getElementById('testimonialTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+        const testimonials = track.children;
+        let currentIndex = 0;
+
+        // Create dots
+        for (let i = 0; i < testimonials.length; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            track.style.transform = `translateX(-${index * 100}%)`;
+            
+            const dots = dotsContainer.children;
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.toggle('active', i === index);
+            }
+        }
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            goToSlide(currentIndex);
+        }, 5000);
+
+        // Quote Calculator
+        function calculateQuote() {
+            const numWindows = parseInt(document.getElementById('numWindows').value) || 10;
+            const propertyType = document.getElementById('propertyType').value;
+            const frequency = document.getElementById('frequency').value;
+            
+            let basePrice = numWindows * 2.5;
+            
+            // Property type multiplier
+            const typeMultipliers = {
+                'flat': 0.8,
+                'house': 1.0,
+                'large': 1.3,
+                'commercial': 1.5
+            };
+            basePrice *= typeMultipliers[propertyType];
+            
+            // Frequency discount
+            const frequencyDiscounts = {
+                'once': 1.0,
+                'monthly': 0.85,
+                'fortnightly': 0.80,
+                'weekly': 0.75
+            };
+            basePrice *= frequencyDiscounts[frequency];
+            
+            // Minimum price
+            basePrice = Math.max(basePrice, 25);
+            
+            document.getElementById('priceDisplay').textContent = '£' + Math.round(basePrice);
+        }
+
+        // Postcode Checker
+        function checkPostcode() {
+            const postcode = document.getElementById('postcodeInput').value.toUpperCase().replace(/\s/g, '');
+            const resultElement = document.getElementById('coverageResult');
+            
+            const coveredAreas = ['FY1', 'FY2', 'FY3', 'FY4', 'FY5', 'FY6', 'FY7'];
+            const covered = coveredAreas.some(area => postcode.startsWith(area));
+            
+            if (postcode === '') {
+                resultElement.textContent = 'Please enter a postcode';
+                resultElement.style.color = 'var(--text-light)';
+            } else if (covered) {
+                resultElement.textContent = '✓ Great news! We cover your area.';
+                resultElement.style.color = 'var(--secondary)';
+            } else {
+                resultElement.textContent = '✗ Sorry, we don\'t currently cover this area. Call us to discuss!';
+                resultElement.style.color = 'var(--primary)';
+            }
+        }
+
+        // Initialize calculator
+        calculateQuote();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGR Electrical | Professional Electrical Services in Skelmersdale</title>
+    <meta name="description" content="Expert electrical services in Skelmersdale. 24/7 emergency call-outs, installations, testing & repairs. Trusted by homeowners & businesses.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Technical Precision - Sharp, Industrial */
+            --primary: #E63946;       /* Electric Red */
+            --secondary: #1D3557;     /* Deep Navy */
+            --accent: #FFB703;        /* Warning Yellow */
+            --bg: #F8F9FA;
+            --text: #212529;
+            --border: #CED4DA;
+            
+            /* Technical Personality: Sharp edges, no rounded corners */
+            --radius: 0px;
+            --shadow: none;
+            --border-width: 2px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        /* Emergency Banner - Sticky */
+        .emergency-banner {
+            background: var(--accent);
+            color: #000;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: var(--border-width) solid #000;
+        }
+
+        /* Header */
+        header {
+            background: var(--secondary);
+            color: white;
+            padding: 20px 5%;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact-btn {
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border: var(--border-width) solid var(--primary);
+            transition: all 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: transparent;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary) 0%, #2A4A6A 100%);
+            color: white;
+            padding: 60px 5%;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 15px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border: var(--border-width) solid;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--secondary);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 5%;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary);
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--bg);
+            padding: 30px;
+            border: var(--border-width) solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+
+        /* Portfolio Gallery */
+        .portfolio {
+            padding: 60px 5%;
+            background: var(--bg);
+        }
+
+        .gallery-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            background: #ccc;
+            height: 300px;
+            border: var(--border-width) solid var(--border);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 60px 5%;
+            background: white;
+        }
+
+        .reviews-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: var(--bg);
+            padding: 30px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .stars {
+            color: var(--accent);
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .reviewer {
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        .reviewer-service {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Quote Form */
+        .quote-form {
+            padding: 60px 5%;
+            background: var(--secondary);
+            color: white;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: var(--border-width) solid var(--border);
+            background: white;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            border: var(--border-width) solid var(--primary);
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: transparent;
+            color: var(--primary);
+        }
+
+        /* Service Area Map */
+        .service-area {
+            padding: 60px 5%;
+            background: white;
+        }
+
+        .map-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 450px;
+            border: var(--border-width) solid var(--border);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Sticky Mobile Contact Bar */
+        .mobile-contact-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--secondary);
+            padding: 15px;
+            z-index: 1000;
+            border-top: 4px solid var(--primary);
+        }
+
+        .mobile-contact-bar .btn-group {
+            display: flex;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .mobile-contact-bar a {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: var(--border-width) solid var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-contact-bar {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        ⚡ AVAILABLE NOW - 24/7 EMERGENCY ELECTRICAL SERVICES ⚡
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">NGR ELECTRICAL</div>
+            <a href="tel:01695721916" class="contact-btn">CALL: 01695 721916</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Professional Electrical Services in Skelmersdale</h1>
+            <p>Trusted by homeowners and businesses across Lancashire for expert installations, testing, and emergency repairs.</p>
+            <div class="cta-buttons">
+                <a href="tel:01695721916" class="btn-primary">CALL NOW</a>
+                <a href="#quote" class="btn-secondary">GET FREE QUOTE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>⚡ Emergency Call-Outs</h3>
+                <p>24/7 emergency electrical services. Power failures, faults, and urgent repairs handled immediately.</p>
+            </div>
+            <div class="service-card">
+                <h3>🏠 Home Installations</h3>
+                <p>Complete electrical installations for new builds, extensions, and renovations. Professional and compliant.</p>
+            </div>
+            <div class="service-card">
+                <h3>🏢 Commercial Electricals</h3>
+                <p>Comprehensive commercial electrical services including testing, maintenance, and installation.</p>
+            </div>
+            <div class="service-card">
+                <h3>🔍 Testing & Inspection</h3>
+                <p>EICR testing, PAT testing, and full electrical inspections. Certified and documented.</p>
+            </div>
+            <div class="service-card">
+                <h3>💡 Lighting Solutions</h3>
+                <p>LED upgrades, security lighting, and custom lighting installations for homes and businesses.</p>
+            </div>
+            <div class="service-card">
+                <h3>🔌 Rewiring Services</h3>
+                <p>Full and partial rewiring for older properties. Safe, compliant, and guaranteed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="portfolio">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800" alt="Commercial electrical installation">
+                <div class="gallery-caption">Commercial Electrical Installation - Skelmersdale</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800" alt="Residential rewiring">
+                <div class="gallery-caption">Full Rewiring - Family Home</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800" alt="LED lighting installation">
+                <div class="gallery-caption">LED Lighting Upgrade - Office Building</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800" alt="Electrical testing">
+                <div class="gallery-caption">EICR Testing & Certification</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Excellent service from start to finish. Responded quickly to our emergency call-out and fixed the fault within hours. Professional and reasonably priced."</p>
+                <div class="reviewer">Mark Thompson</div>
+                <div class="reviewer-service">Emergency Call-Out</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"NGR Electrical completed a full rewire of our house. Clean, efficient work with no mess left behind. Would highly recommend to anyone."</p>
+                <div class="reviewer">Sarah Mitchell</div>
+                <div class="reviewer-service">Complete Rewiring</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Used them for commercial testing and inspection. Very thorough, all documentation provided promptly. Will use again for all our electrical needs."</p>
+                <div class="reviewer">David Chen</div>
+                <div class="reviewer-service">Commercial EICR Testing</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Quote Form -->
+    <section class="quote-form" id="quote">
+        <h2 class="section-title" style="color: white;">Get Your Free Quote</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="service">Service Required *</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a service...</option>
+                    <option value="emergency">Emergency Call-Out</option>
+                    <option value="installation">Installation</option>
+                    <option value="rewiring">Rewiring</option>
+                    <option value="testing">Testing & Inspection</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Details *</label>
+                <textarea id="message" name="message" required placeholder="Please describe the work you need..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">GET FREE QUOTE</button>
+        </form>
+    </section>
+
+    <!-- Service Area Map -->
+    <section class="service-area">
+        <h2 class="section-title">Our Service Area</h2>
+        <div class="map-container">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-2.8%2C53.54%2C-2.6%2C53.62&layer=mapnik&marker=53.58%2C-2.7" frameborder="0"></iframe>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">Serving Skelmersdale and surrounding areas in Lancashire</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>NGR Electrical</strong></p>
+        <p>Unit 1, Peel House, Peel Rd, Skelmersdale WN8 9PT</p>
+        <p>Phone: <a href="tel:01695721916">01695 721916</a></p>
+        <p>Email: <a href="mailto:info@ngrelectrical.co.uk">info@ngrelectrical.co.uk</a></p>
+        <p style="margin-top: 20px; color: #aaa; font-size: 14px;">© 2026 NGR Electrical. All rights reserved.</p>
+    </footer>
+
+    <!-- Sticky Mobile Contact Bar -->
+    <div class="mobile-contact-bar">
+        <div class="btn-group">
+            <a href="tel:01695721916">📞 CALL</a>
+            <a href="mailto:info@ngrelectrical.co.uk">✉️ EMAIL</a>
+        </div>
+    </div>
+</body>
+</html>

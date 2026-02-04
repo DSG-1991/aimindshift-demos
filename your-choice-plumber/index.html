@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Choice Plumber - Your Trusted Local Plumber in Liverpool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Friendly Family Personality - Plumber */
+            --primary: #1E40AF;       /* Navy Blue */
+            --primary-light: #3B82F6; /* Lighter Blue */
+            --accent: #F59E0B;        /* Warm Orange */
+            --bg-warm: #FFF8F3;       /* Warm off-white */
+            --bg: #FAFAFA;
+            --text: #1F2937;
+            --text-light: #6B7280;
+            --white: #FFFFFF;
+            
+            /* Friendly shapes */
+            --radius: 20px;
+            --shadow: 0 4px 15px rgba(245, 158, 11, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--bg);
+        }
+
+        /* Header with friendly logo */
+        header {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 36px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text);
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: var(--radius);
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background: #D97706;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.2);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* DIFFERENT LAYOUT: Warm background hero, no video background */
+        .hero {
+            background: var(--bg-warm);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 10px 24px;
+            border-radius: var(--radius);
+            font-weight: 700;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .hero h1 {
+            font-family: 'Caveat', cursive;
+            font-size: 56px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 24px;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        /* Hero video background - full width */
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Trust badges */
+        .trust-section {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .trust-badges {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+
+        .trust-card {
+            text-align: center;
+            padding: 32px;
+            background: var(--bg-warm);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .trust-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .trust-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .trust-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        /* Services */
+        .services {
+            padding: 80px 20px;
+            background: var(--bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'Caveat', cursive;
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--text-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            border-left: 5px solid var(--accent);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Portfolio */
+        .portfolio {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .portfolio-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.15);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-caption {
+            padding: 20px;
+            background: var(--bg-warm);
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        /* Reviews */
+        .reviews {
+            padding: 80px 20px;
+            background: var(--bg);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 36px;
+            border-radius: var(--radius);
+            border-top: 4px solid var(--accent);
+            box-shadow: var(--shadow);
+        }
+
+        .stars {
+            color: #FCD34D;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .review-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .reviewer {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .reviewer-name {
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .reviewer-service {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 20px;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Caveat', cursive;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-white:hover {
+            background: var(--bg-warm);
+        }
+
+        /* Footer */
+        footer {
+            background: #1F2937;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 8px;
+        }
+
+        .footer-contact {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 20px 0;
+        }
+
+        /* Mobile sticky bar */
+        .mobile-sticky {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 16px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            display: none;
+            gap: 12px;
+            z-index: 1000;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero {
+                min-height: 500px !important;
+                padding: 40px 20px !important;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .mobile-sticky {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 640px) {
+            header .container {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .logo {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo-text {
+                font-size: 18px;
+            }
+
+            .hero {
+                min-height: 550px !important;
+            }
+
+            .hero h1 {
+                font-size: 32px !important;
+            }
+
+            .hero .subtitle {
+                font-size: 20px !important;
+            }
+
+            .hero p {
+                font-size: 16px !important;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .services-grid,
+            .portfolio-grid,
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-badges {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🔧</span>
+                <span class="logo-text">YOUR CHOICE PLUMBER</span>
+            </div>
+            <a href="tel:07766700973" class="btn btn-primary">Call: 07766 700973</a>
+        </div>
+    </header>
+
+    <!-- Hero Section - Video background with text overlay -->
+    <section class="hero" style="position: relative; min-height: 600px; display: flex; align-items: center; padding: 60px 20px;">
+        <!-- Video background -->
+        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+            <source src="hero-video.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Overlay for readability -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 2;"></div>
+        
+        <!-- Content overlaid on video -->
+        <div class="container" style="position: relative; z-index: 3; text-align: center; color: white;">
+            <!-- 1. TRUST SIGNAL -->
+            <div class="hero-badge" style="background: rgba(255, 255, 255, 0.95); color: var(--primary);">✓ Serving Liverpool Since 2010</div>
+            
+            <!-- 2. HEADLINE -->
+            <h1 style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">Your Friendly Local Plumber</h1>
+            <p class="subtitle" style="color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.5);">Your Choice Plumber</p>
+            
+            <!-- 3. VALUE PROPOSITION -->
+            <p style="color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); max-width: 700px; margin: 0 auto 40px;">Professional plumbing and heating solutions for homes and businesses across Liverpool. Fast, reliable service you can trust.</p>
+            
+            <!-- 4. CALL TO ACTION -->
+            <div class="hero-ctas">
+                <a href="tel:07766700973" class="btn btn-primary">Call Now: 07766 700973</a>
+                <a href="#quote" class="btn btn-secondary" style="background: white; color: var(--primary);">Get Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+<!-- Reviews -->
+    <section class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Read reviews from our satisfied customers across Liverpool</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Brilliant service! Called them out for an emergency leak and they were here within the hour. Fixed it quickly and at a fair price. Highly recommend!"</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">JM</div>
+                        <div>
+                            <div class="reviewer-name">James Mitchell</div>
+                            <div class="reviewer-service">Emergency Leak Repair</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Had our bathroom completely redone. Professional, tidy, and finished on time. The quality of work is excellent. Very happy customers!"</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">LC</div>
+                        <div>
+                            <div class="reviewer-name">Lisa Clarke</div>
+                            <div class="reviewer-service">Bathroom Installation</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Great service for our boiler replacement. Explained everything clearly, no pushy sales, just honest advice. Will definitely use again."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">RT</div>
+                        <div>
+                            <div class="reviewer-name">Robert Taylor</div>
+                            <div class="reviewer-service">Boiler Replacement</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Trust Badges -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-badges">
+                <div class="trust-card">
+                    <div class="trust-icon">✓</div>
+                    <h3>Fully Qualified</h3>
+                    <p>Gas Safe registered & insured</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">24</div>
+                    <h3>24/7 Emergency</h3>
+                    <p>Available when you need us</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">💰</div>
+                    <h3>Fixed Prices</h3>
+                    <p>No hidden fees, ever</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🏆</div>
+                    <h3>10+ Years Experience</h3>
+                    <p>Trusted across Liverpool</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Services -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Complete plumbing and heating solutions for your home or business</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚰</div>
+                    <h3>Emergency Plumbing</h3>
+                    <p>24/7 emergency callout for leaks, burst pipes, and urgent plumbing issues. Fast response across Liverpool.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h3>Boiler Services</h3>
+                    <p>Installation, repairs, and annual servicing. Keep your heating running efficiently all year round.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚿</div>
+                    <h3>Bathroom Installations</h3>
+                    <p>Complete bathroom fitting services. From design to installation, we handle everything.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Repairs & Maintenance</h3>
+                    <p>Tap repairs, toilet fixes, radiator bleeding, and general plumbing maintenance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Central Heating</h3>
+                    <p>Installation and upgrades of central heating systems. Energy-efficient solutions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Landlord Certificates</h3>
+                    <p>Gas safety certificates and compliance testing for landlords and property managers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Portfolio -->
+    <section class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Recent Work</h2>
+                <p class="section-subtitle">See the quality of our plumbing and heating installations</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="portfolio/work-1.jpg" alt="Plumbing project">
+                    <div class="portfolio-caption">Bathroom Installation - Urmston</div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="portfolio/work-2.jpg" alt="Heating installation">
+                    <div class="portfolio-caption">Boiler Replacement - Liverpool</div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="portfolio/work-3.jpg" alt="Emergency repair">
+                    <div class="portfolio-caption">Emergency Pipe Repair</div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="portfolio/work-4.jpg" alt="Central heating">
+                    <div class="portfolio-caption">Central Heating Install</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Need a Plumber Today?</h2>
+            <p>Call now for a free quote or emergency plumbing service. Available 24/7 across Liverpool.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:07766700973" class="btn btn-white">Call: 07766 700973</a>
+                <a href="#quote" class="btn btn-secondary">Get Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>Your Choice Plumber</h3>
+            <p>Your Trusted Local Plumber in Liverpool</p>
+            <div class="footer-contact">07766 700973</div>
+            <p>&copy; 2026 Your Choice Plumber. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky -->
+    <div class="mobile-sticky">
+        <a href="tel:07766700973" class="btn btn-primary" style="flex: 1;">📞 Call</a>
+        <a href="https://wa.me/447766700973" class="btn btn-secondary" style="flex: 1;">💬 WhatsApp</a>
+    </div>
+</body>
+</html>

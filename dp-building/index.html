@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D P Building - Professional Builders in Newcastle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #D97706;
+            --primary-dark: #B45309;
+            --secondary: #1F2937;
+            --bg: #FAFAFA;
+            --text: #1F2937;
+            --text-light: #6B7280;
+        }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; }
+        header { background: white; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        header .container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-icon { font-size: 36px; }
+        .logo-text { font-size: 24px; font-weight: 800; }
+        .btn { padding: 14px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-block; transition: all 0.3s; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .hero { position: relative; min-height: 600px; display: flex; align-items: center; background: url('portfolio/work-1.jpg') center/cover; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+        .hero .container { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 60px 20px; text-align: center; color: white; }
+        .hero h1 { font-size: 52px; font-weight: 800; margin-bottom: 20px; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+        .hero p { font-size: 20px; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-ctas { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .reviews, .trust-section, .services, .portfolio, .cta-section { padding: 80px 20px; }
+        .reviews { background: white; }
+        .section-title { font-size: 42px; font-weight: 800; text-align: center; margin-bottom: 16px; }
+        .section-subtitle { font-size: 18px; color: var(--text-light); text-align: center; margin-bottom: 60px; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto; }
+        .review-card { background: var(--bg); padding: 32px; border-radius: 12px; border-left: 4px solid var(--primary); }
+        .stars { color: #FCD34D; font-size: 20px; margin-bottom: 12px; }
+        .review-text { font-style: italic; margin-bottom: 20px; line-height: 1.8; }
+        .reviewer { display: flex; align-items: center; gap: 12px; }
+        .reviewer-avatar { width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; }
+        .services-grid, .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto; }
+        .service-card { background: white; padding: 40px; border-radius: 12px; border-left: 4px solid var(--primary); }
+        .portfolio-item { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .portfolio-item img { width: 100%; height: 280px; object-fit: cover; }
+        .cta-section { background: var(--primary); color: white; text-align: center; }
+        footer { background: #1F2937; color: white; padding: 40px 20px; text-align: center; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .reviews-grid, .services-grid, .portfolio-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🏗️</span>
+                <span class="logo-text">D P BUILDING</span>
+            </div>
+            <a href="tel:07712633738" class="btn btn-primary">Call: 07712 633738</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Professional Building & Joinery in Newcastle</h1>
+            <p>Expert builders delivering quality construction, renovations, and joinery services across Newcastle and the North East.</p>
+            <div class="hero-ctas">
+                <a href="tel:07712633738" class="btn btn-primary">Call Now: 07712 633738</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <h2 class="section-title">Customer Reviews</h2>
+        <p class="section-subtitle">See what our customers say about our work</p>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Excellent work on our extension. Professional, reliable, and great quality. Highly recommend!"</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">JB</div>
+                    <div>
+                        <div style="font-weight: 700;">John Brown</div>
+                        <div style="font-size: 14px; color: #6B7280;">Extension Build</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Top quality joinery work. Turned up on time every day and finished exactly when they said. Very happy."</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">SM</div>
+                    <div>
+                        <div style="font-weight: 700;">Sarah Mitchell</div>
+                        <div style="font-size: 14px; color: #6B7280;">Joinery Work</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Great builders. Did a full house renovation for us. Clean, tidy, and professional throughout."</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">DW</div>
+                    <div>
+                        <div style="font-weight: 700;">David Wilson</div>
+                        <div style="font-size: 14px; color: #6B7280;">Full Renovation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" style="background: var(--bg);">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Professional building and joinery across Newcastle</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3 style="font-size: 22px; margin-bottom: 12px;">Extensions</h3>
+                <p style="color: var(--text-light);">Quality home extensions to add space and value to your property.</p>
+            </div>
+            <div class="service-card">
+                <h3 style="font-size: 22px; margin-bottom: 12px;">Renovations</h3>
+                <p style="color: var(--text-light);">Complete property renovations from concept to completion.</p>
+            </div>
+            <div class="service-card">
+                <h3 style="font-size: 22px; margin-bottom: 12px;">Joinery</h3>
+                <p style="color: var(--text-light);">Expert joinery work including doors, windows, and custom carpentry.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <h2 class="section-title">Recent Projects</h2>
+        <p class="section-subtitle">See examples of our work across Newcastle</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item"><img src="portfolio/work-1.jpg" alt="Project"></div>
+            <div class="portfolio-item"><img src="portfolio/work-2.jpg" alt="Project"></div>
+            <div class="portfolio-item"><img src="portfolio/work-3.jpg" alt="Project"></div>
+            <div class="portfolio-item"><img src="portfolio/work-4.jpg" alt="Project"></div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 style="font-size: 42px; margin-bottom: 20px;">Ready to Start Your Project?</h2>
+        <p style="font-size: 20px; margin-bottom: 40px;">Call now for a free quote</p>
+        <a href="tel:07712633738" class="btn" style="background: white; color: var(--primary);">Call: 07712 633738</a>
+    </section>
+
+    <footer>
+        <h3>D P Building & Joinery Contractors</h3>
+        <p>Professional Builders in Newcastle</p>
+        <p style="font-size: 22px; font-weight: 700; color: var(--primary); margin-top: 16px;">07712 633738</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM Building Services - Trusted Builders in Blackpool</title>
+    <meta name="description" content="Professional building and construction services in Blackpool. Quality workmanship, reliable service. Get your free quote today.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2C5F7F;
+            --primary-dark: #1D3F54;
+            --secondary: #D97835;
+            --text: #2D3748;
+            --text-light: #4A5568;
+            --bg: #FFFFFF;
+            --bg-light: #F7FAFC;
+            --border: #E2E8F0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        /* Emergency Banner - WOW Feature #1 */
+        .emergency-banner {
+            background: linear-gradient(135deg, var(--secondary) 0%, #E88847 100%);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .emergency-banner a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+            padding: 6px 16px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .emergency-banner a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Header */
+        header {
+            background: var(--bg);
+            padding: 20px 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 56px;
+            z-index: 999;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-call {
+            background: var(--secondary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-call:hover {
+            background: #C86B2E;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="none"/><path d="M0 50h100M50 0v100" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></svg>');
+            background-size: 100px 100px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-highlight {
+            color: var(--secondary);
+            display: block;
+            margin-top: 10px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 25px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .trust-badge strong {
+            font-size: 1.4rem;
+            display: block;
+            color: var(--secondary);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+        }
+
+        /* Quick Quote Form - WOW Feature #3 */
+        .quick-quote {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .quote-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--secondary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--secondary);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #C86B2E;
+            transform: translateY(-2px);
+        }
+
+        /* Service Area Map - WOW Feature #4 */
+        .service-area {
+            padding: 80px 20px;
+            background: var(--bg-light);
+        }
+
+        .map-container {
+            max-width: 900px;
+            margin: 30px auto 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 450px;
+            border: 3px solid white;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .why-item {
+            text-align: center;
+        }
+
+        .why-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .why-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        /* Sticky Mobile Contact - WOW Feature #2 */
+        .mobile-contact-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 15px;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            gap: 10px;
+        }
+
+        .mobile-contact-bar a {
+            flex: 1;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .mobile-call {
+            background: var(--primary);
+            color: white;
+        }
+
+        .mobile-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-contact-bar {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .header-cta {
+                display: none;
+            }
+
+            body {
+                padding-bottom: 80px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        🏗️ Available Now - Quality Building Services in Blackpool
+        <a href="tel:+447495280275">Call: 07495 280275</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">DM</div>
+                <span>DM Building Services</span>
+            </div>
+            <div class="header-cta">
+                <a href="tel:+447495280275" class="btn-call">📞 Call 07495 280275</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                Trusted Building Services in Blackpool
+                <span class="hero-highlight">Quality Workmanship, Reliable Service</span>
+            </h1>
+            <p>From extensions and renovations to complete home improvements - we bring your vision to life with professional craftsmanship you can trust.</p>
+            <a href="#quote" class="btn-call" style="display: inline-block;">Get Your Free Quote</a>
+            
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <strong>15+</strong>
+                    Years Experience
+                </div>
+                <div class="trust-badge">
+                    <strong>500+</strong>
+                    Projects Completed
+                </div>
+                <div class="trust-badge">
+                    <strong>100%</strong>
+                    Customer Satisfaction
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Building Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏡</div>
+                    <h3>Home Extensions</h3>
+                    <p>Expand your living space with expertly designed and built extensions. From single-storey to double-storey, we handle every detail.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔨</div>
+                    <h3>Renovations</h3>
+                    <p>Transform your home with our comprehensive renovation services. Kitchen, bathroom, or full-house makeovers done right.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧱</div>
+                    <h3>Brickwork</h3>
+                    <p>Professional brickwork services including garden walls, boundary walls, and structural repairs with attention to detail.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>New Builds</h3>
+                    <p>Complete new build construction services from foundation to finish. Quality construction you can rely on.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Property Maintenance</h3>
+                    <p>Regular maintenance and repair services to keep your property in excellent condition year-round.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Plastering & Rendering</h3>
+                    <p>Smooth finishes and expert rendering services for interior and exterior walls. Professional results guaranteed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Quote Form -->
+    <section class="quick-quote" id="quote">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Quote in 30 Seconds</h2>
+            <form class="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" required placeholder="John Smith">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" required placeholder="07xxx xxx xxx">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Service Required</label>
+                    <select name="service" required>
+                        <option value="">Select a service...</option>
+                        <option value="extension">Home Extension</option>
+                        <option value="renovation">Renovation</option>
+                        <option value="brickwork">Brickwork</option>
+                        <option value="new-build">New Build</option>
+                        <option value="maintenance">Property Maintenance</option>
+                        <option value="plastering">Plastering & Rendering</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Project Details</label>
+                    <textarea name="details" rows="4" placeholder="Tell us about your project..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Get My Free Quote</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Service Area Map -->
+    <section class="service-area">
+        <div class="container">
+            <h2 class="section-title">Areas We Cover</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto; color: var(--text-light);">
+                Proudly serving Blackpool and surrounding areas including Fleetwood, Cleveleys, Thornton, Poulton-le-Fylde, and the Fylde Coast.
+            </p>
+            <div class="map-container">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-3.0879%2C53.7858%2C-2.9879%2C53.8558&layer=mapnik&marker=53.8175%2C-3.0379"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose DM Building Services?</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">⭐</div>
+                    <h3>15+ Years Experience</h3>
+                    <p>Decades of experience delivering quality building projects across Blackpool and the Fylde Coast.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">✓</div>
+                    <h3>Fully Qualified</h3>
+                    <p>All work carried out to the highest standards with full qualifications and insurance coverage.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">💰</div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Fair, transparent quotes with no hidden costs. Value for money without compromising on quality.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">🤝</div>
+                    <h3>Reliable Service</h3>
+                    <p>On-time project completion with clear communication throughout. We're there when we say we will be.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DM Building Services</h3>
+                <p>Professional building and construction services in Blackpool. Quality workmanship you can trust.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📞 07495 280275</p>
+                <p>✉️ dmbuildingservices@outlook.com</p>
+                <p>📍 43 Lytham Road, Blackpool, FY1 6DQ</p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <a href="#services">Home Extensions</a>
+                <a href="#services">Renovations</a>
+                <a href="#services">Brickwork</a>
+                <a href="#services">New Builds</a>
+                <a href="#services">Property Maintenance</a>
+            </div>
+            <div class="footer-section">
+                <h3>Areas Covered</h3>
+                <p>Blackpool</p>
+                <p>Fleetwood</p>
+                <p>Cleveleys</p>
+                <p>Thornton</p>
+                <p>Poulton-le-Fylde</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Professional website by <a href="https://aimindshift.consulting" target="_blank">AiMindShift</a> - Helping local businesses get found online</p>
+            <p>&copy; 2026 DM Building Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Contact Bar -->
+    <div class="mobile-contact-bar">
+        <a href="tel:+447495280275" class="mobile-call">📞 Call Now</a>
+        <a href="https://wa.me/447495280275" class="mobile-whatsapp">💬 WhatsApp</a>
+    </div>
+
+    <!-- Live Chat Widget - WOW Feature #5 (Tawk.to - Ready to activate) -->
+    <!-- 
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/YOUR_WIDGET_ID';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    -->
+</body>
+</html>

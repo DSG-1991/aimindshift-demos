@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P. Wood Plumbing & Heating - Emergency Plumber in Fleetwood | 24/7 Service</title>
+    <meta name="description" content="Need a plumber in Fleetwood? P. Wood Plumbing & Heating offers fast, reliable plumbing services. Experienced professionals. Call 01253 874982 for same-day service.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #1561ad;
+            --secondary: #1dbab4;
+            --accent: #fc5226;
+            --dark: #0a1628;
+            --light: #f8f9fa;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Header - Reduced Size */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            padding: 0.75rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+        
+        @media (min-width: 769px) {
+            header .container {
+                padding: 0 2rem;
+            }
+        }
+        
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .powered-by {
+            position: absolute;
+            right: 2rem;
+            top: -1.5rem;
+            font-size: 0.7rem;
+            color: #999;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .powered-by:hover {
+            color: var(--primary);
+        }
+        
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.65rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(21, 97, 173, 0.3);
+        }
+        
+        .header-phone:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(21, 97, 173, 0.4);
+        }
+        
+        /* Hero with Video Background */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 7rem 2rem 5rem;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1561ad 0%, #1dbab4 100%);
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            z-index: 2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(252, 82, 38, 0.95);
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 2rem;
+            animation: pulse 2s ease-in-out infinite;
+            box-shadow: 0 4px 25px rgba(252, 82, 38, 0.6); text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.6), 0 2px 10px rgba(0,0,0,0.4);
+        }
+        
+        .hero-subtitle {
+            text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+            font-size: 1.35rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.98;
+            font-weight: 500;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+            font-size: 3rem;
+            font-weight: 800;
+            display: block;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .cta-group {
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1.25rem 2.5rem;
+            background: #0a1628;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button.secondary {
+            background: rgba(255,255,255,0.25);
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255,255,255,0.9);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Section */
+        section {
+            padding: 6rem 0;
+        }
+        
+        section:nth-child(even) {
+            background: var(--light);
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Trust */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .trust-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .trust-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 0 8px 30px rgba(21, 97, 173, 0.25);
+        }
+        
+        .trust-item h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+        
+        .trust-item p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* Contact */
+        section.contact {
+            background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+        
+        .contact h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            opacity: 0.9;
+        }
+        
+        .trust-badges {
+            margin-top: 3rem;
+            font-size: 1.15rem;
+            opacity: 0.95;
+        }
+        
+        .service-area {
+            margin-top: 2rem;
+            opacity: 0.9;
+            font-size: 1.05rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #f8f9fa;
+            color: #333;
+            padding: 0;
+            font-size: 0.95rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        footer h4 {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        
+        footer a {
+            transition: all 0.3s ease;
+        }
+        
+        footer a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 7rem 1.5rem 4rem;
+            }
+            
+            .logo span {
+                display: none;
+            }
+            
+            .logo img {
+                height: 32px !important;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+            text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+                font-size: 1.15rem;
+            }
+            
+            .hero-stats {
+                gap: 2rem;
+            }
+            
+            .stat-value {
+            text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+                font-size: 2.25rem;
+            }
+            
+            .section-title {
+                font-size: 2.25rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-group {
+                flex-direction: column;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 400px;
+            }
+            
+            .contact h2 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-info {
+                font-size: 1.75rem;
+            }
+            
+            .logo {
+                font-size: 1.15rem;
+            }
+            
+            .header-phone {
+                font-size: 0.85rem;
+                padding: 0.6rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container" style="position: relative;">
+            <div class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
+                <img src="logo.png" alt="P. Wood Logo" style="height: 40px; width: auto;">
+                <span>P. Wood Plumbing & Heating</span>
+            </div>
+            <a href="tel:01253874982" class="header-phone">
+                📞 01253 874982
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <!-- Video background (ready for Sora video) -->
+        <video autoplay loop muted playsinline class="hero-video" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E">
+            <source src="hero-video.mp4" type="video/mp4">
+            <!-- Fallback: <source src="https://player.vimeo.com/external/371433164.hd.mp4?s=c3c8b4e64b4f74764b4e9e12b02a8e93ab82dc66&profile_id=175" type="video/mp4"> -->
+        </video>
+        
+        <div class="hero-content">
+            <div class="hero-badge">⚡ 24/7 EMERGENCY SERVICE - NO CALL OUT FEE</div>
+            <h1>Fleetwood's Trusted Emergency Plumber</h1>
+            <p class="hero-subtitle">Fast Response Times | Gas Safe Registered | Fully Insured & Guaranteed</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">24/7</span>
+                    <span class="stat-label">Emergency Service</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">< 1hr</span>
+                    <span class="stat-label">Response Time</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Satisfaction</span>
+                </div>
+            </div>
+            
+            <div class="cta-group">
+                <a href="tel:01253874982" class="cta-button">📞 Call Now: 01253 874982</a>
+                <a href="#contact" class="cta-button secondary">Free Quote in 24 Hours</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Complete Plumbing Services Across Fleetwood</h2>
+            <p class="section-subtitle">From emergency repairs to full installations - we do it all to the highest standard</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚨</div>
+                    <h3>24/7 Emergency Plumbing</h3>
+                    <p>Burst pipe? Leak emergency? We're here within the hour. Fast response, permanent fixes, no mess left behind. Your emergency is our priority.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Repairs & Maintenance</h3>
+                    <p>Dripping taps, running toilets, slow drains - we fix it right the first time. Guaranteed workmanship you can trust for years to come.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🚿</div>
+                    <h3>Bathroom Renovations</h3>
+                    <p>Transform your bathroom with our complete installation service. Modern designs, expert fitting, stunning results that add value to your home.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h3>Boiler Installation & Repair</h3>
+                    <p>Gas Safe certified engineers. Save up to 30% on energy bills with a new A-rated boiler. Fast repairs, expert installations, finance available.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Central Heating Systems</h3>
+                    <p>Warm home, lower bills. Expert radiator installation, system upgrades, and efficiency improvements that pay for themselves.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Power Flushing Service</h3>
+                    <p>Cold radiators? Noisy boiler? Our power flush service restores full efficiency and saves you money on heating costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Recent Projects in Fleetwood</h2>
+            <p class="section-subtitle">See the quality workmanship our customers love - real jobs, real results</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipN5jj9Lm_dHdiZBaImZroy7G9co89MIDOKXvw4A=w800-h600-k-no" alt="Professional plumbing installation - P. Wood Plumbing">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipM_iC5k7ovhGZ8GmfUHLKJmguu7ShtdAH5cgzaK=w800-h600-k-no" alt="Boiler installation - Gas Safe registered">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPWMbxc1bmRPbWB6dfVdXVseUjEIN3xlrhfku-V=w800-h600-k-no" alt="Quality heating work">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipO7q0mMCxDmQKZrf3k5Ttmsv9jrm34325uQxAYU=w800-h600-k-no" alt="Central heating installation">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPkAXx-Ci1u0c5uY7VqgBMnFmg47RqH9l3_RX2r=w800-h600-k-no" alt="Expert plumbing services">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNMuZeOAM6wMKlEpOtKvUkew74MeTx9kkxYJMQS=w800-h600-k-no" alt="Bathroom renovation work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Why Fleetwood Trusts P. Wood Plumbing & Heating</h2>
+            <p class="section-subtitle">Accredited, insured, and delivering excellence you can depend on</p>
+            
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">⚡</div>
+                    <h3>Same-Day Service</h3>
+                    <p>Call before 3pm and we'll be there today. Emergency? We're on our way within 60 minutes, guaranteed.</p>
+                </div>
+                
+                <div class="trust-item">
+                    <div class="trust-icon">✅</div>
+                    <h3>Gas Safe Certified</h3>
+                    <p>Fully qualified, insured, and DBS checked. Your safety and peace of mind are our top priorities.</p>
+                </div>
+                
+                <div class="trust-item">
+                    <div class="trust-icon">💰</div>
+                    <h3>Transparent Pricing</h3>
+                    <p>Fixed-price quotes before we start. No hidden fees. No surprises. Ever. That's our guarantee to you.</p>
+                </div>
+                
+                <div class="trust-item">
+                    <div class="trust-icon">🛡️</div>
+                    <h3>12-Month Guarantee</h3>
+                    <p>All work covered by our comprehensive guarantee. We stand behind our workmanship 100%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get Your Free Quote Today</h2>
+            <p class="contact-subtitle">Call now for same-day service | No call-out fee | All work guaranteed</p>
+            
+            <div class="contact-info">
+                📞 <a href="tel:01253874982">01253 874982</a>
+            </div>
+            
+            <a href="tel:01253874982" class="cta-button">📞 Call 01253 874982 Now</a>
+            
+            <div class="trust-badges">
+                ✅ Free quotes | ✅ No hidden fees | ✅ 12-month guarantee on all work
+            </div>
+            
+            <p class="service-area">Proudly serving Fleetwood, Thornton-Cleveleys, Poulton-le-Fylde & surrounding areas</p>
+        </div>
+    </section>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 2rem; text-align: center;">
+            <p style="margin-bottom: 0.5rem; font-weight: 600; color: var(--primary);">P. Wood Plumbing & Heating</p>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">Gas Safe Registered | Fully Insured | Serving Fleetwood & surrounding areas</p>
+            <p style="font-size: 0.85rem; color: #999; margin-bottom: 1.5rem;">&copy; 2026 P. Wood Plumbing & Heating. All rights reserved.</p>
+            <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+                <p style="font-size: 1rem; color: white; margin-bottom: 0.75rem; font-weight: 600;">
+                    ✨ Website by AiMindShift
+                </p>
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.9); margin-bottom: 1rem;">Need a professional website like this for your business?</p>
+                <a href="https://aimindshift.consulting" target="_blank" style="display: inline-block; background: white; color: var(--primary); padding: 0.75rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Visit AiMindShift →</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "P. Wood Plumbing & Heating",
+      "description": "Emergency plumber in Fleetwood offering fast, reliable plumbing services 24/7",
+      "telephone": "01253-874982",
+      "email": "phil@pwoodplumbing.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Fleetwood",
+        "addressRegion": "Lancashire"
+      },
+      "areaServed": ["Fleetwood", "Thornton-Cleveleys", "Poulton-le-Fylde"],
+      "priceRange": "££",
+      "openingHours": "Mo-Su 00:00-23:59"
+    }
+    </script>
+</body>
+</html>

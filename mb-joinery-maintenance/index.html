@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB Joinery & Maintenance | Professional Joinery Services in Manchester</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Reliable Professional Design Language */
+        :root {
+            --primary-color: #2c3e50; /* Dark Blue/Gray */
+            --secondary-color: #34495e; /* Slightly lighter Dark Blue/Gray */
+            --accent-color: #e67e22; /* Orange for highlights */
+            --light-bg: #ecf0f1; /* Light Gray Background */
+            --white: #ffffff;
+            --dark-text: #34495e;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --sans-serif: 'Roboto', sans-serif;
+        }
+        
+        body {
+            font-family: var(--sans-serif);
+            color: var(--dark-text);
+            margin: 0;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* General Sections */
+        section {
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #d35400; /* Darker orange */
+        }
+
+        /* Header */
+        .header-container {
+            background-color: var(--white);
+            padding: 1rem 0;
+            border-bottom: 1px solid #e9ecef;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-container .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-img { height: 50px; }
+        .phone-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .phone-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        .phone-btn i {
+            margin-right: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--light-bg);
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            text-align: left;
+        }
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            line-height: 1.1;
+        }
+        .hero-text p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: var(--dark-text);
+        }
+        .hero-image-container {
+            position: relative;
+            height: auto; /* Make height dynamic */
+            min-height: 250px; /* Ensure a minimum height but allow flexibility */
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+        .badge {
+            background-color: var(--white);
+            padding: 0.8rem 1.2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            font-weight: 600;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Pain Points */
+        .pain-points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .pain-point-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .pain-point-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        .pain-point-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .service-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+        }
+
+        /* Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        .portfolio-item p {
+            margin-top: 0.75rem;
+            font-style: italic;
+            color: var(--secondary-color);
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            background-color: var(--light-bg);
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        .testimonial-card i {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+        .reviewer-name {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-top: 1rem;
+            text-align: right;
+        }
+        .review-rating {
+            color: #f39c12; /* Star color */
+            text-align: right;
+        }
+
+        /* Before/After Slider */
+        .before-after-section {
+            background-color: var(--white);
+        }
+        .before-after-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        .before-after-img-wrap {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .before-img, .after-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .after-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%; /* Initial split */
+        }
+        .slider {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: var(--accent-color);
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        .slider::before {
+            content: '<';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 8px 10px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .slider::after {
+            content: '>';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(90deg);
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 8px 10px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Service Area Map */
+        .map-section {
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+        .map-container {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        /* Postcode Checker */
+        .postcode-checker {
+            background-color: var(--white);
+            text-align: center;
+        }
+        .postcode-form {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .postcode-input {
+            flex-grow: 1;
+            max-width: 300px;
+        }
+        .postcode-input input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ced4da;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+        }
+        .check-button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .check-button:hover {
+            background-color: var(--secondary-color);
+        }
+        #postcodeResult {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* About Us */
+        .about-section {
+            background-color: var(--light-bg);
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+        }
+        .about-item {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        .about-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            background-color: var(--white);
+        }
+        .contact-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            background-color: var(--light-bg);
+        }
+        .contact-form-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        .contact-form-container input[type="text"],
+        .contact-form-container input[type="email"],
+        .contact-form-container input[type="tel"],
+        .contact-form-container select,
+        .contact-form-container textarea {
+            width: calc(100% - 20px);
+            padding: 0.8rem 10px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ced4da;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+        }
+        .contact-form-container textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .contact-form-container button {
+            width: 100%;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form-container button:hover {
+            background-color: #d35400;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Footer */
+        .footer-container {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.9rem;
+        }
+        .footer-container a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .header-container .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .logo-img { margin-bottom: 1rem; }
+            .hero-content {
+                grid-template-columns: 1fr; 
+                text-align: center;
+                padding-top: 2rem; 
+                padding-bottom: 2rem; 
+            }
+            .hero-text { order: 1; }
+            .hero-image-container {
+                order: 2; 
+                height: auto; 
+                min-height: 250px; 
+                margin-top: 2rem; 
+            }
+            .hero {
+                min-height: auto; 
+                height: auto;
+                display: block; 
+            }
+            .hero-text h1 { font-size: 2.5rem; }
+            .hero-text p { font-size: 1rem; }
+            .trust-badges { justify-content: center; }
+            .pain-points-grid, .services-grid, .portfolio-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .postcode-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            .postcode-input input,
+            .check-button {
+                width: 100%;
+                max-width: 300px;
+            }
+            .about-content { 
+                grid-template-columns: 1fr; 
+            }
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-text h1 { font-size: 2rem; }
+            .trust-badges .badge { 
+                font-size: 0.9rem;
+                padding: 0.6rem 1rem;
+            }
+            section { padding: 3rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-container">
+        <div class="container">
+            <div style="display:flex; align-items:center; justify-content:space-between; width:100%; flex-wrap:wrap;">
+                <img src="logo.svg" alt="MB Joinery & Maintenance" class="logo-img">
+                <a href="tel:+447932755388" class="phone-btn"><i class="fas fa-phone-alt"></i> 07932 755388</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Bespoke Joinery & Maintenance in Manchester.</h2>
+                        <p>Crafting quality, inspiring spaces. Your trusted partner for all joinery and maintenance needs in Manchester.</p>
+                        <div class="trust-badges">
+                            <div class="badge"><i class="fas fa-wrench"></i> Expert Craftsmanship</div>
+                            <div class="badge"><i class="fas fa-award"></i> Proven Reputation</div>
+                            <div class="badge"><i class="fas fa-certificate"></i> Quality Guaranteed</div>
+                        </div>
+                        <a href="#contact" class="btn">Get a Free Quote</a>
+                    </div>
+                    <div class="hero-image-container">
+                        <video class="hero-video" autoplay loop muted playsinline src="hero-video.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pain-points-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem;">Facing These Challenges? We Can Help.</h2>
+                <div class="pain-points-grid">
+                    <div class="pain-point-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>No Online Presence</h3>
+                        <p>Potential clients can't find you online, missing out on valuable leads.</p>
+                    </div>
+                    <div class="pain-point-card">
+                        <i class="fas fa-images"></i>
+                        <h3>Hard to Showcase Work</h3>
+                        <p>No dedicated platform to display your beautiful projects and craftsmanship.</p>
+                    </div>
+                    <div class="pain-point-card">
+                        <i class="fas fa-star-half-alt"></i>
+                        <h3>Struggling to Get Reviews</h3>
+                        <p>Word-of-mouth is great, but online reviews build undeniable trust and authority.</p>
+                    </div>
+                    <div class="pain-point-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>No Online Booking</h3>
+                        <p>Making it difficult for clients to inquire or book your services easily.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section" style="background-color: var(--white);">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem;">Our Expert Joinery Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-toolbox"></i>
+                        <h3>Bespoke Furniture</h3>
+                        <p>Custom-designed and handcrafted furniture to fit your unique style and space.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-sink"></i>
+                        <h3>Kitchen Installation</h3>
+                        <p>From full kitchen renovations to custom cabinet fitting, we ensure perfection.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-cabinet-shopping"></i>
+                        <h3>Custom Cabinetry</h3>
+                        <p>Tailor-made cabinets and storage solutions for functionality and elegance.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-door-open"></i>
+                        <h3>Door & Window Fitting</h3>
+                        <p>Precision installation of internal and external doors, windows, and frames.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-home"></i>
+                        <h3>General Joinery</h3>
+                        <p>Skirting boards, architraves, shelving, and all aspects of general carpentry.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-section testimonials-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem;">Our Craft, Your Vision: A Portfolio of Excellence</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1621259182977-bcf431e779a5?q=80&w=1500&auto=format&fit=crop" alt="Bespoke Shelf Installation">
+                        <p>Bespoke Shelf Installation</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1599815967069-42b78d23485d?q=80&w=1500&auto=format&fit=crop" alt="Custom Kitchen Cabinets">
+                        <p>Custom Kitchen Cabinets</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1550993003-8d0092c23ae3?q=80&w=1500&auto=format&fit=crop" alt="Handcrafted Wooden Table">
+                        <p>Handcrafted Wooden Table</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1596541313495-21d120a233b8?q=80&w=1500&auto=format&fit=crop" alt="Door Fitting Service">
+                        <p>Door Fitting Service</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1550993003-8d0092c23ae3?q=80&w=1500&auto=format&fit=crop" alt="Custom Wardrobe Design">
+                        <p>Custom Wardrobe Design</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1621259182977-bcf431e779a5?q=80&w=1500&auto=format&fit=crop" alt="Decking Installation">
+                        <p>Decking Installation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem;">Hear From Our Satisfied Clients</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Amazing quality and attention to detail. MB Joinery transformed my kitchen with bespoke cabinets. Highly recommend!"</p>
+                        <p class="reviewer-name">- Sarah J., Manchester</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Professional and efficient. They fitted all our new internal doors perfectly. Excellent service from start to finish."</p>
+                        <p class="reviewer-name">- David P., Stockport</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Couldn't be happier with the custom shelving in my living room. Truly skilled joiners, fair price, and great communication."</p>
+                        <p class="reviewer-name">- Emily R., Salford</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"MB Joinery installed our new wooden floor and it looks fantastic. Very tidy work and a pleasure to deal with."</p>
+                        <p class="reviewer-name">- Mark T., Oldham</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"From the initial design consultation to the final fit, their craftsmanship on our bespoke media unit was impeccable."</p>
+                        <p class="reviewer-name">- Laura K., Altrincham</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="before-after-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem;">See the Transformation: Before & After</h2>
+                <div class="before-after-container">
+                    <div class="before-after-img-wrap">
+                        <img class="before-img" src="https://images.unsplash.com/photo-1596541313495-21d120a233b8?q=80&w=1500&auto=format&fit=crop" alt="Before Joinery Work">
+                        <img class="after-img" src="https://images.unsplash.com/photo-1550993003-8d0092c23ae3?q=80&w=1500&auto=format&fit=crop" alt="After Joinery Work">
+                    </div>
+                    <div class="slider"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem;">Our Service Area in Manchester</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-2.28%2C53.46%2C-2.18%2C53.51&amp;layer=mapnik&amp;marker=53.479%2C-2.245"
+                        width="100%" 
+                        height="400"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="postcode-checker">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 1.5rem;">Check if We Service Your Location</h2>
+                <p class="section-subtitle" style="text-align: center; margin-bottom: 1.5rem;">Enter your postcode to check if we service your location</p>
+                <div class="postcode-form">
+                    <div class="postcode-input">
+                        <input type="text" placeholder="Enter your postcode (e.g., M12 6BZ)" id="postcodeInput">
+                    </div>
+                    <button class="check-button" id="checkPostcodeBtn">Check Coverage</button>
+                </div>
+                <div id="postcodeResult" style="text-align: center; margin-top: 1rem;"></div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem;">About MB Joinery & Maintenance</h2>
+                <div class="about-content">
+                    <div class="about-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Local Manchester Experts</h3>
+                        <p>Proudly serving Manchester and surrounding areas with reliable joinery services.</p>
+                    </div>
+                    <div class="about-item">
+                        <i class="fas fa-tools"></i>
+                        <h3>Years of Experience</h3>
+                        <p>With years of hands-on experience, our team delivers superior craftsmanship on every project.</p>
+                    </div>
+                    <div class="about-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Fully Insured</h3>
+                        <p>For your peace of mind, MB Joinery & Maintenance is fully insured for all work undertaken.</p>
+                    </div>
+                    <div class="about-item">
+                        <i class="fas fa-gem"></i>
+                        <h3>Quality Craftsmanship</h3>
+                        <p>We are dedicated to using the finest materials and techniques to ensure lasting quality.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section" id="contact">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem;">Get a Free Quote Today</h2>
+                <div class="contact-form-container">
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="tel">Phone Number</label>
+                        <input type="tel" id="tel" name="tel">
+
+                        <label for="address">Address (Optional)</label>
+                        <input type="text" id="address" name="address">
+
+                        <label for="service">Interested Service</label>
+                        <select id="service" name="service">
+                            <option value="General Joinery">General Joinery</option>
+                            <option value="Bespoke Furniture">Bespoke Furniture</option>
+                            <option value="Kitchen Installation">Kitchen Installation</option>
+                            <option value="Custom Cabinetry">Custom Cabinetry</option>
+                            <option value="Door & Window Fitting">Door & Window Fitting</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+
+                        <button type="submit">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/447932755388?text=Hi!%20I'd%20like%20a%20quote%20for%20joinery%20work%20please." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="footer-container">
+        <div class="container">
+            <p>&copy; 2024 MB Joinery & Maintenance. All rights reserved.</p>
+            <p>Built with <a href="https://aimindshift.consulting" target="_blank">AiMindShift</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Before/After Slider Functionality
+            const slider = document.querySelector('.slider');
+            const afterImg = document.querySelector('.after-img');
+            const beforeAfterContainer = document.querySelector('.before-after-container');
+
+            let isResizing = false;
+
+            if (slider && afterImg && beforeAfterContainer) {
+                slider.addEventListener('mousedown', function(e) {
+                    isResizing = true;
+                    beforeAfterContainer.classList.add('resizing');
+                });
+
+                document.addEventListener('mousemove', function(e) {
+                    if (!isResizing) return;
+                    let x = e.clientX;
+                    let rect = beforeAfterContainer.getBoundingClientRect();
+                    let width = rect.width;
+                    let offsetX = x - rect.left;
+
+                    if (offsetX < 0) offsetX = 0;
+                    if (offsetX > width) offsetX = width;
+
+                    let percentage = (offsetX / width) * 100;
+                    afterImg.style.width = percentage + '%';
+                    slider.style.left = percentage + '%';
+                });
+
+                document.addEventListener('mouseup', function() {
+                    isResizing = false;
+                    beforeAfterContainer.classList.remove('resizing');
+                });
+            }
+
+            // Postcode Checker Functionality
+            const checkPostcodeBtn = document.getElementById('checkPostcodeBtn');
+            const postcodeInput = document.getElementById('postcodeInput');
+            const postcodeResult = document.getElementById('postcodeResult');
+
+            if (checkPostcodeBtn && postcodeInput && postcodeResult) {
+                checkPostcodeBtn.addEventListener('click', function() {
+                    const postcode = postcodeInput.value.toUpperCase().trim();
+                    const coveredAreas = ['M', 'SK', 'WA', 'BL', 'OL', 'WN']; // Manchester (M), Stockport (SK), Warrington (WA), Bolton (BL), Oldham (OL), Wigan (WN)
+
+                    if (!postcode) {
+                        postcodeResult.innerHTML = '<p style="color: red;">Please enter a postcode</p>';
+                        return;
+                    }
+
+                    const postcodeArea = postcode.match(/^[A-Z]{1,2}[0-9][A-Z0-9]?/);
+                    if (!postcodeArea) {
+                        postcodeResult.innerHTML = '<p style="color: red;">Invalid UK postcode format</p>';
+                        return;
+                    }
+
+                    const areaPrefix = postcodeArea[0];
+                    const isCovered = coveredAreas.some(area => areaPrefix.startsWith(area));
+
+                    if (isCovered) {
+                        postcodeResult.innerHTML = '<p style="color: green;">✅ Great news! We cover your area.</p>';
+                    } else {
+                        postcodeResult.innerHTML = '<p style="color: orange;">⚠️ We might not cover your exact location, but please contact us to confirm!</p>';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

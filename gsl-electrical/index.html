@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSL Electrical Contractors | Professional Electrical Services in Leyland</title>
+    <meta name="description" content="Expert electrical contractors in Leyland, Lancashire. Installations, repairs, testing & 24/7 emergency services. Trusted by homes & businesses.">
+    
+    <!-- Premium Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Premium Technical Precision */
+            --primary: #0066CC;       /* Professional Blue */
+            --primary-dark: #004A99;  /* Darker blue for depth */
+            --secondary: #1A1A1A;     /* Black */
+            --accent: #FF8C00;        /* Refined Orange (less harsh) */
+            --bg: #FAFAFA;
+            --bg-alt: #FFFFFF;
+            --text: #1D1D1F;
+            --text-light: #6B6B6B;
+            --border: #E5E5E7;
+            
+            /* Premium Design Elements */
+            --radius: 0px;                                    /* Sharp edges (Technical) */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);     /* Subtle depth */
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);     /* Card elevation */
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);    /* Hero elements */
+            --border-width: 1px;                             /* Refined (was 2px) */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth premium transitions */
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Emergency Banner - Sticky */
+        .emergency-banner {
+            background: var(--accent);
+            color: #000;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: var(--border-width) solid #000;
+        }
+
+        /* Header */
+        header {
+            background: var(--secondary);
+            color: white;
+            padding: 20px 5%;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact-btn {
+            background: var(--primary);
+            color: white;
+            padding: 14px 32px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-md);
+            font-size: 14px;
+        }
+
+        .contact-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            color: white;
+            padding: 100px 5%;
+            border-bottom: 4px solid var(--secondary);
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.5), rgba(0, 74, 153, 0.6));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .scroll-indicator::after {
+            content: '↓';
+            font-size: 32px;
+            color: white;
+            opacity: 0.7;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 36px;
+            font-weight: 400;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            padding: 20px 56px;
+            font-size: 20px;
+            font-weight: 700;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 15px rgba(255, 140, 0, 0);
+            }
+        }
+
+        .btn-primary:hover {
+            background: #FF7A00;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: var(--shadow-lg);
+            animation: none;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 5%;
+            background: var(--bg-alt);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary);
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: var(--bg-alt);
+            padding: 36px;
+            border: var(--border-width) solid var(--border);
+            border-left: 3px solid var(--primary);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-card:hover {
+            border-left-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-card h3 {
+            color: var(--secondary);
+            margin-bottom: 16px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Portfolio Gallery */
+        .portfolio {
+            padding: 100px 5%;
+            background: var(--bg);
+        }
+
+        .gallery-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            background: #f0f0f0;
+            height: 320px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 100px 5%;
+            background: white;
+        }
+
+        .reviews-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: var(--bg-alt);
+            padding: 36px;
+            border-top: 3px solid var(--primary);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .review-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .stars {
+            color: var(--accent);
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .reviewer {
+            font-weight: bold;
+            color: var(--secondary);
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .reviewer-service {
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* Quote Form */
+        .quote-form {
+            padding: 100px 5%;
+            background: var(--secondary);
+            color: white;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            color: white;
+            transition: var(--transition);
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        select option {
+            background: var(--secondary);
+            color: white;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            padding: 16px 48px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-md);
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Service Area Map */
+        .service-area {
+            padding: 60px 5%;
+            background: white;
+        }
+
+        .map-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 450px;
+            border: var(--border-width) solid var(--secondary);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Sticky Mobile Contact Bar */
+        .mobile-contact-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--secondary);
+            padding: 15px;
+            z-index: 1000;
+            border-top: 4px solid var(--primary);
+        }
+
+        .mobile-contact-bar .btn-group {
+            display: flex;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .mobile-contact-bar a {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: var(--border-width) solid var(--primary);
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        /* Desktop header - horizontal layout */
+        @media (min-width: 769px) {
+            .header-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        /* Mobile - keep centered */
+        @media (max-width: 768px) {
+            .mobile-contact-bar {
+                display: block;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .services {
+                padding: 60px 5%;
+            }
+
+            .portfolio {
+                padding: 60px 5%;
+            }
+
+            .reviews {
+                padding: 60px 5%;
+            }
+
+            .quote-form {
+                padding: 60px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        ⚡ AVAILABLE NOW - 24/7 EMERGENCY ELECTRICAL SERVICES ⚡ CALL: 07538 962479
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">GSL ELECTRICAL</div>
+            <a href="tel:07538962479" class="contact-btn">CALL: 07538 962479</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Professional Electrical Contractors in Leyland</h1>
+            <p>Trusted electrical services for homes and businesses across Lancashire. Expert installations, testing, and emergency repairs.</p>
+            <div class="cta-buttons">
+                <a href="tel:07538962479" class="btn-primary">CALL NOW</a>
+                <a href="#quote" class="btn-secondary">GET FREE QUOTE</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>⚡ Emergency Call-Outs</h3>
+                <p>24/7 emergency electrical services. Fast response to power failures, faults, and urgent repairs across Leyland and surrounding areas.</p>
+            </div>
+            <div class="service-card">
+                <h3>🏠 Domestic Installations</h3>
+                <p>Complete electrical installations for homes. New builds, extensions, kitchen and bathroom electrics. Fully certified work.</p>
+            </div>
+            <div class="service-card">
+                <h3>🏢 Commercial Electrical</h3>
+                <p>Comprehensive commercial electrical services. Testing, maintenance, installations, and compliance for businesses.</p>
+            </div>
+            <div class="service-card">
+                <h3>🔍 Testing & Certification</h3>
+                <p>EICR testing, PAT testing, and full electrical safety inspections. All work certified and documented to current regulations.</p>
+            </div>
+            <div class="service-card">
+                <h3>💡 LED Lighting Upgrades</h3>
+                <p>Energy-efficient LED lighting installations. Indoor, outdoor, and security lighting for homes and commercial properties.</p>
+            </div>
+            <div class="service-card">
+                <h3>🔌 Rewiring & Upgrades</h3>
+                <p>Full and partial rewiring services. Consumer unit upgrades, socket additions, and electrical system modernization.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="portfolio">
+        <h2 class="section-title">Our Work</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipNlFPKs0KX0LWu2JHX62GVO_V6ESS0fD4G54nN-=w800-h600-k-no" alt="GSL Electrical project">
+                <div class="gallery-caption">Professional Electrical Installation</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoJo9vxv-eDp5yO-VFYcTMMgjSPK7Y3m4WKYkdZzZA7-FJl2l812gQHIIn0qtXPrgc-AQg8vC4s7ZSFKiZlKlFEtIkE6arBKz8DRJ8eeZw7C883slw0xbdsJv_jDJ4NEX3vfgCrqQ=w800-h600-k-no" alt="GSL Electrical work">
+                <div class="gallery-caption">Quality Workmanship</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoL4y1z8sVM3nqTIeZhWwTbGY1slTeL2AnONnwqN7ZmxLXhOowVwI-HJzDPxB5gp1Vn8AgCsZ6bKXGcCGCgR4wf0NZque2iijIMlfJy0EPE5u8yFpG_dzgqaUKLg71DOGVlhQ3f=w800-h600-k-no" alt="Electrical services">
+                <div class="gallery-caption">Trusted Electrical Services</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipOCP0BYOcqbDZDrfHuYm9sB3RgfMteOsomc-jO5=w800-h600-k-no" alt="GSL Electrical contractor work">
+                <div class="gallery-caption">Expert Electrical Contractors</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Fantastic service from GSL Electrical. Responded quickly to our emergency call and sorted the fault efficiently. Professional and reasonably priced."</p>
+                <div class="reviewer">James Wilson</div>
+                <div class="reviewer-service">Emergency Call-Out</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"GSL completed a full rewire of our property. Excellent workmanship, clean and tidy throughout. Would highly recommend to anyone needing electrical work."</p>
+                <div class="reviewer">Emma Roberts</div>
+                <div class="reviewer-service">Full Rewiring</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Used GSL for commercial EICR testing. Very thorough and professional. All certificates provided promptly. Will definitely use again."</p>
+                <div class="reviewer">Michael Chen</div>
+                <div class="reviewer-service">Commercial Testing</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Quote Form -->
+    <section class="quote-form" id="quote">
+        <h2 class="section-title" style="color: white;">Get Your Free Quote</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="service">Service Required *</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a service...</option>
+                    <option value="emergency">Emergency Call-Out</option>
+                    <option value="installation">Installation</option>
+                    <option value="rewiring">Rewiring</option>
+                    <option value="testing">Testing & Certification</option>
+                    <option value="lighting">Lighting Upgrade</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Details *</label>
+                <textarea id="message" name="message" required placeholder="Please describe the work you need..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">REQUEST FREE QUOTE</button>
+        </form>
+    </section>
+
+    <!-- Service Area Map -->
+    <section class="service-area">
+        <h2 class="section-title">Our Service Area</h2>
+        <div class="map-container">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-2.75%2C53.66%2C-2.55%2C53.74&layer=mapnik&marker=53.70%2C-2.65" frameborder="0"></iframe>
+        </div>
+        <p style="text-align: center; margin-top: 20px; font-weight: bold;">Serving Leyland, Preston, and surrounding areas in Lancashire</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>GSL ELECTRICAL CONTRACTORS LTD</strong></p>
+        <p>Leyland, Lancashire PR26, UK</p>
+        <p>Phone: <a href="tel:07538962479">07538 962479</a></p>
+        <p>Email: <a href="mailto:gslelectricalcontractors@gmail.com">gslelectricalcontractors@gmail.com</a></p>
+        <p style="margin-top: 20px; color: #aaa; font-size: 14px;">© 2026 GSL Electrical Contractors Ltd. All rights reserved.</p>
+    </footer>
+
+    <!-- Sticky Mobile Contact Bar -->
+    <div class="mobile-contact-bar">
+        <div class="btn-group">
+            <a href="tel:07538962479">📞 CALL</a>
+            <a href="https://wa.me/447538962479">💬 WHATSAPP</a>
+        </div>
+    </div>
+</body>
+</html>
